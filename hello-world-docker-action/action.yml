@@ -1,0 +1,19 @@
+name: First Action
+
+inputs:
+  who-to-greet:
+    description: Who to greet in the log
+    required: true
+    default: 'World'
+    type: string
+
+outputs:
+  current_time:
+    description: Current time
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile
+  args:
+    - ${{ input.who-to-greet }}
+    
