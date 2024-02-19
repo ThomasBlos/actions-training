@@ -1,4 +1,4 @@
-name: First Action
+name: Hello World Docker Action
 
 inputs:
   who-to-greet:
@@ -15,5 +15,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ input.who-to-greet }}
+    - ${{ inputs.who-to-greet }}
     
